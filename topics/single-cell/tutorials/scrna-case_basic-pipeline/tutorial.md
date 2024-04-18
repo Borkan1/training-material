@@ -151,7 +151,7 @@ You have generated an annotated AnnData object from your raw scRNA-seq fastq fil
 > >   - For instance, you can see a `n_cells` under **var**, which counts the number of cells that gene appears in.
 > >   - In the **obs**, you have both discrete and log-based metrics for `n_genes`, how many genes are counted in a cell, and `n_counts`, how many UMIs are counted per cell. So, for instance, you might count multiple GAPDHs in a cell. Your `n_counts` should thus be higher than `n_genes`.
 > >   - But what about the mitochondria?? Within the cells information **obs**, the `total_counts_mito`,  `log1p_total_counts_mito`, and `pct_counts_mito` has been calculated for each cell.
-> > 2. You can see in the {% icon tool %} **General information about the object** output that the matrix is `31178 x 35734`. This is `obs x vars`, or rather, `cells x genes`, so there are `31178 cells` and `35734 genes` in the matrix.
+> > 2. You can see in the {% icon tool %} **General information about the object** output that the matrix is `31178 x 35734`. This is `obs x vars`, or rather, `cells x genes`, so there are `31627 cells` and `35734 genes` in the matrix.
 > >
 > {: .solution}
 >

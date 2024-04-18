@@ -134,13 +134,13 @@ You have generated an annotated AnnData object from your raw scRNA-seq fastq fil
 >   >
 >   >   > <hands-on-title>Inspecting AnnData Objects</hands-on-title>
 >   >   >
->   >   > 1. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.7.5+galaxy1) %} with the following parameters:
+>   >   > 1. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.10.3+galaxy0) %} with the following parameters:
 >   >   >    - {% icon param-file %} *"Annotated data matrix"*: `Mito-counted AnnData`
 >   >   >    - *"What to inspect?"*: `General information about the object`
->   >   > 2. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.7.5+galaxy1) %} with the following parameters:
+>   >   > 2. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.10.3+galaxy0) %} with the following parameters:
 >   >   >    - {% icon param-file %} *"Annotated data matrix"*: `Mito-counted AnnData`
 >   >   >    - *"What to inspect?"*: `Key-indexed observations annotation (obs)`
->   >   > 3. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.7.5+galaxy1) %} with the following parameters:
+>   >   > 3. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.10.3+galaxy0) %} with the following parameters:
 >   >   >    - {% icon param-file %} *"Annotated data matrix"*: `Mito-counted AnnData`
 >   >   >    - *"What to inspect?"*: `Key-indexed annotation of variables/features (var)`
 >   >   {: .hands_on}
@@ -171,7 +171,7 @@ We want to filter our cells, but first we need to know what our data looks like.
 
 > <hands-on-title>Making QC plots</hands-on-title>
 >
-> 1. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.7.1+galaxy1) %} with the following parameters:
+> 1. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy2) %} with the following parameters:
 >    - {% icon param-file %} *"Annotated data matrix"*: `Mito-counted AnnData`
 >    - *"Method used for plotting"*: `Generic: Violin plot, using 'pl.violin'`
 >        - *"Keys for accessing variables"*: `Subset of variables in 'adata.var_names' or fields of '.obs'`
@@ -180,7 +180,7 @@ We want to filter our cells, but first we need to know what our data looks like.
 >
 > 2. **Rename** {% icon galaxy-pencil %} output `Violin - genotype - log`
 >
-> 3. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.7.1+galaxy1) %} with the following parameters:
+> 3. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy2) %} with the following parameters:
 >    - {% icon param-file %} *"Annotated data matrix"*: `Mito-counted AnnData`
 >    - *"Method used for plotting"*: `Generic: Violin plot, using 'pl.violin'`
 >        - *"Keys for accessing variables"*: `Subset of variables in 'adata.var_names' or fields of '.obs'`
@@ -189,7 +189,7 @@ We want to filter our cells, but first we need to know what our data looks like.
 >
 > 4. **Rename** {% icon galaxy-pencil %} output `Violin - sex - log`
 >
-> 5. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.7.1+galaxy1) %} with the following parameters:
+> 5. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy2) %} with the following parameters:
 >    - {% icon param-file %} *"Annotated data matrix"*: `Mito-counted AnnData`
 >    - *"Method used for plotting"*: `Generic: Violin plot, using 'pl.violin'`
 >        - *"Keys for accessing variables"*: `Subset of variables in 'adata.var_names' or fields of '.obs'`
@@ -198,7 +198,7 @@ We want to filter our cells, but first we need to know what our data looks like.
 >
 > 6. **Rename** {% icon galaxy-pencil %} output `Violin - batch - log`
 >
-> 7. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.7.1+galaxy1) %} with the following parameters:
+> 7. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy2) %} with the following parameters:
 >    - {% icon param-file %} *"Annotated data matrix"*: `Mito-counted AnnData`
 >    - *"Method used for plotting"*: `Generic: Scatter plot along observations or variables axes, using 'pl.scatter'`
 >        - *"Plotting tool that computed coordinates"*: `Using coordinates`
@@ -207,7 +207,7 @@ We want to filter our cells, but first we need to know what our data looks like.
 >
 > 6. **Rename** {% icon galaxy-pencil %} output `Scatter - mito x UMIs`
 >
-> 7. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.7.1+galaxy1) %} with the following parameters:
+> 7. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy2) %} with the following parameters:
 >    - {% icon param-file %} *"Annotated data matrix"*: `Mito-counted AnnData`
 >    - *"Method used for plotting"*: `Generic: Scatter plot along observations or variables axes, using 'pl.scatter'`
 >        - *"Plotting tool that computed coordinates"*: `Using coordinates`
@@ -216,7 +216,7 @@ We want to filter our cells, but first we need to know what our data looks like.
 >
 > 8. **Rename** {% icon galaxy-pencil %} output `Scatter - mito x genes`
 >
-> 9. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.7.1+galaxy1) %} with the following parameters:
+> 9. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy2) %} with the following parameters:
 >    - {% icon param-file %} *"Annotated data matrix"*: `Mito-counted AnnData`
 >    - *"Method used for plotting"*: `Generic: Scatter plot along observations or variables axes, using 'pl.scatter'`
 >        - *"Plotting tool that computed coordinates"*: `Using coordinates`
@@ -348,7 +348,7 @@ It's now time to apply these thresholds to our data! First, a reminder of how ma
 
 > <hands-on-title>Filter cells by log1p_n_genes_by_counts</hands-on-title>
 >
-> 1. {% tool [Scanpy FilterCells](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_filter_cells/scanpy_filter_cells/1.8.1+galaxy0) %} with the following parameters:
+> 1. {% tool [Scanpy FilterCells](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_filter_cells/scanpy_filter_cells/1.9.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Input object in AnnData/Loom format"*: `Mito-counted AnnData`
 >    - In *"Parameters to select cells to keep"*:
 >        - {% icon param-repeat %} *"Insert Parameters to select cells to keep"*
@@ -358,7 +358,7 @@ It's now time to apply these thresholds to our data! First, a reminder of how ma
 >
 > 2. **Rename** {% icon galaxy-pencil %} output as `Genes-filtered Object`
 >
-> 3. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.7.1+galaxy1) %} with the following parameters:
+> 3. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy2) %} with the following parameters:
 >    - {% icon param-file %} *"Annotated data matrix"*: `Genes-filtered Object`
 >    - *"Method used for plotting"*: `Generic: Violin plot, using 'pl.violin'`
 >        - *"Keys for accessing variables"*: `Subset of variables in 'adata.var_names' or fields of '.obs'`
@@ -367,7 +367,7 @@ It's now time to apply these thresholds to our data! First, a reminder of how ma
 >
 > 4. **Rename** {% icon galaxy-pencil %} output `Violin - Filterbygenes`
 >
-> 5. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.7.5+galaxy1) %} with the following parameters:
+> 5. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.10.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Annotated data matrix"*: `Genes-filtered Object`
 >    - *"What to inspect?"*: `General information about the object`
 >
@@ -393,7 +393,7 @@ Note that the {% icon tool %} **Scanpy Filtercells** allows you to put {% icon p
 
 > <hands-on-title>Filter cells by log1p_total_counts</hands-on-title>
 >
-> 1. {% tool [Scanpy FilterCells](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_filter_cells/scanpy_filter_cells/1.8.1+galaxy0) %} with the following parameters:
+> 1. {% tool [Scanpy FilterCells](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_filter_cells/scanpy_filter_cells/1.9.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Input object in AnnData/Loom format"*: `Genes-filtered Object`
 >    - In *"Parameters to select cells to keep"*:
 >        - {% icon param-repeat %} *"Insert Parameters to select cells to keep"*
@@ -403,7 +403,7 @@ Note that the {% icon tool %} **Scanpy Filtercells** allows you to put {% icon p
 >
 > 2. **Rename** {% icon galaxy-pencil %} output as `Counts-filtered Object`
 >
-> 3. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.7.1+galaxy1) %} with the following parameters:
+> 3. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy2) %} with the following parameters:
 >    - {% icon param-file %} *"Annotated data matrix"*: `Counts-filtered Object`
 >    - *"Method used for plotting"*: `Generic: Violin plot, using 'pl.violin'`
 >        - *"Keys for accessing variables"*: `Subset of variables in 'adata.var_names' or fields of '.obs'`
@@ -412,7 +412,7 @@ Note that the {% icon tool %} **Scanpy Filtercells** allows you to put {% icon p
 >
 > 4. **Rename** {% icon galaxy-pencil %} output `Violin - Filterbycounts`
 >
-> 5. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.7.5+galaxy1) %} with the following parameters:
+> 5. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.10.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Annotated data matrix"*: `Counts-filtered Object`
 >    - *"What to inspect?"*: `General information about the object`
 >
@@ -446,7 +446,7 @@ Note that the {% icon tool %} **Scanpy Filtercells** allows you to put {% icon p
 >
 > 2. **Rename** {% icon galaxy-pencil %} output as `Mito-filtered Object`
 >
-> 3. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.7.1+galaxy1) %} with the following parameters:
+> 3. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy2) %} with the following parameters:
 >    - {% icon param-file %} *"Annotated data matrix"*: `Mito-filtered Object`
 >    - *"Method used for plotting"*: `Generic: Violin plot, using 'pl.violin'`
 >        - *"Keys for accessing variables"*: `Subset of variables in 'adata.var_names' or fields of '.obs'`
@@ -459,7 +459,7 @@ Note that the {% icon tool %} **Scanpy Filtercells** allows you to put {% icon p
 >
 > 4. **Rename** {% icon galaxy-pencil %} output `Violin - Filterbymito`
 >
-> 5. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.7.5+galaxy1) %} with the following parameters:
+> 5. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.10.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Annotated data matrix"*: `Mito-filtered Object`
 >    - *"What to inspect?"*: `General information about the object`
 >
@@ -496,7 +496,7 @@ Fantastic work! However, you've now removed a whole heap of cells, and since the
 
 > <hands-on-title>Filter genes</hands-on-title>
 >
-> 1. {% tool [Scanpy FilterGenes](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_filter_genes/scanpy_filter_genes/1.8.1+galaxy0) %} with the following parameters:
+> 1. {% tool [Scanpy FilterGenes](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_filter_genes/scanpy_filter_genes/1.9.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Input object in AnnData/Loom format"*: `Mito-filtered Object`
 >    - In *"Parameters to select genes to keep"*:
 >        - {% icon param-repeat %} *"Insert Parameters to select genes to keep"*
@@ -506,7 +506,7 @@ Fantastic work! However, you've now removed a whole heap of cells, and since the
 >
 > 2. **Rename** {% icon galaxy-pencil %} output as `Filtered Object`
 >
-> 3. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.7.5+galaxy1) %} with the following parameters:
+> 3. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.10.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Annotated data matrix"*: `Filtered Object`
 >    - *"What to inspect?"*: `General information about the object`
 >
@@ -533,7 +533,7 @@ So currently, you have a matrix that is 8605 cells by 15395 genes. This is still
 
 > <hands-on-title>Normalisation</hands-on-title>
 >
-> 1. {% tool [Scanpy NormaliseData](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_normalise_data/scanpy_normalise_data/1.8.1+galaxy0) %} with the following parameters:
+> 1. {% tool [Scanpy NormaliseData](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_normalise_data/scanpy_normalise_data/1.9.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Input object in AnnData/Loom format"*: `Filtered Object`
 {: .hands_on}
 
@@ -543,7 +543,7 @@ Now we need to look at reducing our gene dimensions. We have loads of genes, but
 
 > <hands-on-title>Find variable genes</hands-on-title>
 >
-> 1. {% tool [Scanpy FindVariableGenes](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_find_variable_genes/scanpy_find_variable_genes/1.8.1+galaxy0) %} with the following parameters:
+> 1. {% tool [Scanpy FindVariableGenes](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_find_variable_genes/scanpy_find_variable_genes/1.9.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Input object in AnnData/Loom format"*: `output_h5ad` (output of **Scanpy NormaliseData** {% icon tool %})
 >    - *"Flavor of computing normalised dispersion"*: `Seurat`
 >    - *"Number of top variable genes to keep, mandatory if flavor='seurat_v3'"*: `` (remove the automated 2000 here and leave the space blank)
@@ -555,7 +555,7 @@ Next up, we're going to scale our data so that all genes have the same variance 
 
 > <hands-on-title>Scaling data</hands-on-title>
 >
-> 1. {% tool [Scanpy ScaleData](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_scale_data/scanpy_scale_data/1.8.1+galaxy0) %} with the following parameters:
+> 1. {% tool [Scanpy ScaleData](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_scale_data/scanpy_scale_data/1.9.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Input object in AnnData/Loom format"*: `Use_me_FVG` (output of **Scanpy FindVariableGenes** {% icon tool %})
 >    - *"Truncate to this value after scaling"*: `10.0`
 > 2. **Rename** {% icon galaxy-pencil %} plot output `Use_me_Scaled`
@@ -584,11 +584,11 @@ Principal components are calculated from highly dimensional data to find the mos
 
 > <hands-on-title>Calculate Principal Components</hands-on-title>
 >
-> 1. {% tool [Scanpy RunPCA](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_pca/scanpy_run_pca/1.8.1+galaxy0) %} with the following parameters:
+> 1. {% tool [Scanpy RunPCA](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_pca/scanpy_run_pca/1.9.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Input object in AnnData/Loom format"*: `Use_me_Scaled` (output of **Scanpy ScaleData** {% icon tool %})
 >    - *"Number of PCs to produce"*: `50`
 >
-> 2.  {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.7.1+galaxy1) %} with the following parameters:
+> 2.  {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy2) %} with the following parameters:
 >    - {% icon param-file %} *"Annotated data matrix"*: `output_h5ad` (output of **Scanpy RunPCA** {% icon tool %})
 >    - *"Method used for plotting"*: `PCA: Scatter plot in PCA coordinates, using 'pl.pca_variance_ratio'`
 >        - *"Number of PCs to show"*: `50`
@@ -616,7 +616,7 @@ We're still looking at around 20 dimensions at this point. We need to identify h
 
 > <hands-on-title>ComputeGraph</hands-on-title>
 >
-> 1. {% tool [Scanpy ComputeGraph](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_compute_graph/scanpy_compute_graph/1.8.1+galaxy1) %} with the following parameters:
+> 1. {% tool [Scanpy ComputeGraph](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_compute_graph/scanpy_compute_graph/1.9.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Input object in AnnData/Loom format"*: `output_h5ad` (output of **Scanpy RunPCA** {% icon tool %})
 >    - *"Use programme defaults"*: {% icon param-toggle %} `No`
 >    - *"Maximum number of neighbours used"*: `15`
@@ -637,13 +637,13 @@ Two major visualisations for this data are tSNE and UMAP. We must calculate the 
 
 > <hands-on-title>Calculating tSNE & UMAP</hands-on-title>
 >
-> 1. {% tool [Scanpy RunTSNE](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_tsne/scanpy_run_tsne/1.8.1+galaxy1) %} with the following parameters:
+> 1. {% tool [Scanpy RunTSNE](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_tsne/scanpy_run_tsne/1.9.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Input object in AnnData/Loom format"*: `output_h5ad` (output of **Scanpy ComputeGraph** {% icon tool %})
 >    - *"Use the indicated representation"*: `X_pca`
 >    - *"Use programme defaults"*: {% icon param-toggle %} `No`
 >    - *"The perplexity is related to the number of nearest neighbours, select a value between 5 and 50"*: `30`
 >
-> 2. {% tool [Scanpy RunUMAP](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_umap/scanpy_run_umap/1.8.1+galaxy0) %} with the following parameters:
+> 2. {% tool [Scanpy RunUMAP](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_umap/scanpy_run_umap/1.9.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Input object in AnnData/Loom format"*: `output_h5ad` (output of **Scanpy RunTSNE** {% icon tool %})
 >    - *"Use programme defaults"*: {% icon param-toggle %} `Yes`
 {: .hands_on}
@@ -677,7 +677,7 @@ Finally, let's identify clusters! Unfortunately, it's not as majestic as biologi
 
 > <hands-on-title>FindClusters</hands-on-title>
 >
-> 1. {% tool [Scanpy FindCluster](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_find_cluster/scanpy_find_cluster/1.8.1+galaxy0) %} with the following parameters:
+> 1. {% tool [Scanpy FindCluster](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_find_cluster/scanpy_find_cluster/1.9.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Input object in AnnData/Loom format"*: `output_h5ad` (output of **Scanpy RunUMAP** {% icon tool %})
 >    - *"Use programme defaults"*: {% icon param-toggle %} `No`
 >    - *"Resolution, high value for more and smaller clusters"*: `0.6`
@@ -689,7 +689,7 @@ Nearly plotting time! But one final piece is to add in SOME gene information. Le
 
 > <hands-on-title>FindMarkers</hands-on-title>
 >
-> 1. {% tool [Scanpy FindMarkers](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_find_markers/scanpy_find_markers/1.8.1+galaxy0) %} with the following parameters:
+> 1. {% tool [Scanpy FindMarkers](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_find_markers/scanpy_find_markers/1.9.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Input object in AnnData/Loom format"*: `output_h5ad` (output of **Scanpy FindClusters** {% icon tool %})
 >
 > 2. **Rename** {% icon galaxy-pencil %} output table (not h5ad) `Markers - cluster`
@@ -698,7 +698,7 @@ Nearly plotting time! But one final piece is to add in SOME gene information. Le
 >
 > But we are also interested in differences across genotype, so let's also check that (note that in this case, it's turning it almost into bulk RNA-seq, because you're comparing all cells of a certain genotype against all cells of the other)
 >
-> 3. {% tool [Scanpy FindMarkers](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_find_markers/scanpy_find_markers/1.8.1+galaxy0) %} with the following parameters:
+> 3. {% tool [Scanpy FindMarkers](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_find_markers/scanpy_find_markers/1.9.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Input object in AnnData/Loom format"*: `Final object`
 >    - *"The sample grouping/clustering to use"*: `genotype`
 >    - *"Use programme defaults"*: {% icon param-toggle %} `Yes`
@@ -713,7 +713,7 @@ Now, there's a small problem here, which is that if you {% icon galaxy-eye %} in
 
 > <hands-on-title>Adding in Gene Names</hands-on-title>
 >
-> 1. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.7.5+galaxy1) %} with the following parameters:
+> 1. {% tool [Inspect AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.10.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Annotated data matrix"*: `Final object`
 >    - *"What to inspect?"*: `Key-indexed annotation of variables/features (var)`
 >
@@ -747,7 +747,7 @@ But first, let's pick some marker genes from the `Markers-cluster` list that you
 
 > <hands-on-title>Plot the cells!</hands-on-title>
 >
-> 1. {% tool [Scanpy PlotEmbed](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy0) %} with the following parameters:
+> 1. {% tool [Scanpy PlotEmbed](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.9.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Input object in AnnData/Loom format"*: `Final object`
 >    - *"name of the embedding to plot"*: `pca`
 >    - *"color by attributes, comma separated texts"*: `louvain,sex,batch,genotype,Il2ra,Cd8b1,Cd8a,Cd4,Itm2a,Aif1,log1p_total_counts`
@@ -755,14 +755,14 @@ But first, let's pick some marker genes from the `Markers-cluster` list that you
 >    - *"Use raw attributes if present"*: `No`
 >    - {% icon time %} *You can re-run {% icon galaxy-refresh %} the same tool again, but change `pca` to `tsne` and then finally to `umap` in order to skip the following two steps.*
 >
-> 2. {% tool [Scanpy PlotEmbed](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy0) %} with the following parameters:
+> 2. {% tool [Scanpy PlotEmbed](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.9.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Input object in AnnData/Loom format"*: `Final object`
 >    - *"name of the embedding to plot"*: `tsne`
 >    - *"color by attributes, comma separated texts"*: `louvain,sex,batch,genotype,Il2ra,Cd8b1,Cd8a,Cd4,Itm2a,Aif1,log1p_total_counts`
 >    - *"Field for gene symbols"*: `Symbol`
 >    - *"Use raw attributes if present"*: `No`
 >
-> 3. {% tool [Scanpy PlotEmbed](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy0) %} with the following parameters:
+> 3. {% tool [Scanpy PlotEmbed](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.9.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Input object in AnnData/Loom format"*: `Final object`
 >    - *"name of the embedding to plot"*: `umap`
 >    - *"color by attributes, comma separated texts"*: `louvain,sex,batch,genotype,Il2ra,Cd8b1,Cd8a,Cd4,Itm2a,Aif1,log1p_total_counts`
@@ -814,14 +814,14 @@ The authors weren't interested in further annotation of the DP cells, so neither
 
 > <hands-on-title>Annotating clusters</hands-on-title>
 >
-> 1. {% tool [Manipulate AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_manipulate/anndata_manipulate/0.7.5+galaxy1) %} with the following parameters:
+> 1. {% tool [Manipulate AnnData](toolshed.g2.bx.psu.edu/repos/iuc/anndata_manipulate/anndata_manipulate/0.10.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Annotated data matrix"*: `Final object`
 >    - *"Function to manipulate the object"*: `Rename categories of annotation`
 >    - *"Key for observations or variables annotation"*: `louvain`
 >    - *"Comma-separated list of new categories"*: `DP-M4,DP-M3,DP-M1,T-mat,DN,DP-L,DP-M2,Macrophages`
 >    - Hang on here, though. This unfortunately deletes the original cluster numbering. Just in case you might want this back, we can add that annotation back in.
 >
-> 2. {% tool [AnnData Operations](toolshed.g2.bx.psu.edu/repos/ebi-gxa/anndata_ops/anndata_ops/1.8.1+galaxy0) %} with the following parameters:
+> 2. {% tool [AnnData Operations](toolshed.g2.bx.psu.edu/repos/ebi-gxa/anndata_ops/anndata_ops/1.9.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Input object in hdf5 AnnData format"*: `Final object`
 >    - *"Copy observations (such as clusters)"*: {% icon param-toggle %} *Yes*
 >    - **Keys from obs to copy**
@@ -831,7 +831,7 @@ The authors weren't interested in further annotation of the DP cells, so neither
 >
 >    - You've added the new cell annotations in, now titled `louvain_0`. What, that's not good enough? You want to change the title as well? So be it.
 >
-> 3. {% tool [AnnData Operations](toolshed.g2.bx.psu.edu/repos/ebi-gxa/anndata_ops/anndata_ops/1.8.1+galaxy0) %} {% icon tool %} with the following parameters:
+> 3. {% tool [AnnData Operations](toolshed.g2.bx.psu.edu/repos/ebi-gxa/anndata_ops/anndata_ops/1.9.3+galaxy0) %} {% icon tool %} with the following parameters:
 >    - {% icon param-file %} *"Input object in hdf5 AnnData format"*: (output of **AnnData Operations** {% icon tool %})
 >    - **Change field names in AnnData observations**
 >    - {% icon galaxy-wf-new %} *"+ Insert Change field names in AnnData observations"*
@@ -841,7 +841,7 @@ The authors weren't interested in further annotation of the DP cells, so neither
 >
 > 4. **Rename** {% icon galaxy-pencil %} output h5ad `Final cell annotated object`
 >   -  Time to re-plot! {% icon time %} Feel free to re-run {% icon galaxy-refresh %} the **Scanpy PlotEmbed** tool {% icon tool %} on the new object plotting `cell_type` to speed this up. Otherwise...
-> 5. {% tool [Scanpy PlotEmbed](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy0) %} with the following parameters:
+> 5. {% tool [Scanpy PlotEmbed](toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.9.3+galaxy0) %} with the following parameters:
 >    - {% icon param-file %} *"Input object in AnnData/Loom format"*: `Final cell annotated object`
 >    - *"name of the embedding to plot"*: `umap`
 >    - *"color by attributes, comma separated texts"*: `sex,batch,genotype,Il2ra,Cd8b1,Cd8a,Cd4,Itm2a,Aif1,Hba-a1,log1p_total_counts,cell_type`

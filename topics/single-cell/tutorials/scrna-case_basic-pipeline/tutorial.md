@@ -335,7 +335,7 @@ Now that we've assessed the differences in our samples, we will look at the libr
 
 ## Apply the thresholds
 
-It's now time to apply these thresholds to our data! First, a reminder of how many cells and genes are in your object: `31178 cells` and `35734 genes`. Let's see how that changes each time!
+It's now time to apply these thresholds to our data! First, a reminder of how many cells and genes are in your object: `31627 cells` and `35734 genes`. Let's see how that changes each time!
 
 > <details-title>Working in a group? Decision-time!</details-title>
 > If you are working in a group, you can now divide up a decision here with one *control* and the rest varied numbers so that you can compare results throughout the tutorials.

@@ -4,7 +4,7 @@ layout: tutorial_hands_on
 title: Filter, plot and explore single-cell RNA-seq data (Scanpy)
 subtopic: single-cell-CS
 priority: 3
-zenodo_link: 'https://zenodo.org/record/7053673'
+zenodo_link: 'https://zenodo.org/records/11099298'
 
 redirect_from:
 - /topics/transcriptomics/tutorials/scrna-seq-basic-pipeline/tutorial

@@ -818,7 +818,7 @@ The authors weren't interested in further annotation of the DP cells, so neither
 >    - {% icon param-file %} *"Annotated data matrix"*: `Final object`
 >    - *"Function to manipulate the object"*: `Rename categories of annotation`
 >    - *"Key for observations or variables annotation"*: `louvain`
->    - *"Comma-separated list of new categories"*: `DP-M4,DP-M3,DP-M1,T-mat,DN,DP-L,DP-M2,Macrophages`
+>    - *"Comma-separated list of new categories"*: `DP-M3,DP-M4,T-mat,DN,DP-M1,DP-L,DP-M2,Macrophages`
 >    - Hang on here, though. This unfortunately deletes the original cluster numbering. Just in case you might want this back, we can add that annotation back in.
 >
 > 2. {% tool [AnnData Operations](toolshed.g2.bx.psu.edu/repos/ebi-gxa/anndata_ops/anndata_ops/1.9.3+galaxy0) %} with the following parameters:

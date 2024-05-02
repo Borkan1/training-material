@@ -94,7 +94,7 @@ You can access the data for this tutorial in multiple ways:
 > 2. Import the AnnData object from [Zenodo]({{ page.zenodo_link }})
 >
 >    ```
->    {{ page.zenodo_link }}/files/Mito-counted_AnnData
+>    {{ page.zenodo_link }}/files/Mito-counted_AnnData.h5ad
 >    ```
 >
 >    {% snippet faqs/galaxy/datasets_import_via_link.md %}

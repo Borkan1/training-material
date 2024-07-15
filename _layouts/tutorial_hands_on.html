@@ -128,6 +128,14 @@ We should ONLY be using new_material (if at all possible.)
                 <li class="btn btn-default supporting_material">{% include _includes/resource-tours.html material=own_material topic=topic.name label=true %}</li>
             {% endif %}
 
+            {% if own_material.input_histories %}
+                <li class="btn btn-default supporting_material">{% include _includes/resource-input-histories.html material=own_material topic=topic.name label=true %}</li>
+            {% endif %}
+
+            {% if own_material.answer_histories %}
+                <li class="btn btn-default supporting_material">{% include _includes/resource-answer-histories.html material=own_material topic=topic.name label=true %}</li>
+            {% endif %}
+
             {% if own_material.notebook %}
                 <li class="btn btn-default supporting_material">{% include _includes/resource-notebooks.html material=own_material topic=topic.name label=true %}</li>
             {% endif %}
@@ -139,7 +147,7 @@ We should ONLY be using new_material (if at all possible.)
             {% endif %}
 
             <!-- Check the GTN Video Library for recordings of this tutorial or associated slides -->
-            {% include _includes/resource-video-library.html label=true wrapper=true %}
+            {% include _includes/resource-recordings.html label=true wrapper=true %}
 
 
             {% if tuto_has_docker %}
@@ -416,8 +424,10 @@ download.file("{{ site.url }}{{ site.baseurl }}/{{ page.path | replace: ".md", "
                    </p>
                 </blockquote>
 
+		<h2 id="funding">{{locale['references']| default: "Funding" }}</h2>
+		<p>These individuals or organisations provided funding support for the development of this resource</p>
                 {% if page.contributions %}
-                {% include _includes/funding-statement.md contributions=page.contributions %}
+                {% include _includes/funding-statement.md funders=page.contributions.funding %}
                 {% endif %}
 
 
@@ -486,7 +496,6 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
 		   <p>
 		   {% assign feedback_histo = site | get_rating_histogram_chart:own_material_id %}
-
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   {% for hist in feedback_histo %}
 			<tr>
@@ -497,20 +506,43 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 		   </table>
 		   </p>
 		{% assign feedbacks = site | get_recent_feedbacks:own_material_id %}
+        {% comment %} Uncomment to debug feedback size: <p>Feedbacks Count: {{ feedbacks.size }}</p> {% endcomment %}
+        {% if feedbacks.size > 0 %}
 		    {% for feedback in feedbacks %}
 		    <b>{{ feedback[0] }}</b>
 		    <ul>
 				{% for feed in feedback[1] %}
 				<li>
-					{{ feed.rating | to_stars }}: 
+					{{ feed.rating | to_stars }}:
 					{% if feed.pro %}<b>Liked</b>: {{ feed.pro }}{% endif %}
 					{% if feed.con %}<b>Disliked</b>: {{ feed.con }}{% endif %}
 				</li>
 				{% endfor %}
 		    </ul>
 		    {% endfor %}
+        {% else %}
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+        {% endif %}
 		</blockquote>
 
+		
+
+
+		{% assign upcoming_events = site | get_upcoming_events_for_this: new_material %}
+		{% assign upcoming_event_count = upcoming_events | size %}
+		{% if upcoming_event_count > 0 %}
+		<blockquote class="details hide-when-printing" id="upcoming-events">
+                  <div id="upcoming-events-c" class="box-title">
+                    <button type="button" aria-controls="upcoming-events-c" aria-expanded="false">
+                      <i class="fas fa-calendar" aria-hidden="true"></i>
+                      Upcoming events which cover this topic<span role="button" class="fold-unfold fa fa-minus-square" aria-hidden="true"></span>
+                    </button>
+                   </div>
+
+		   <p>Want to learn more with a live instructor? Check out these upcoming events:</p>
+		   {% include _includes/event-table.html events=upcoming_events campaign="via-tutorial" %}
+		</blockquote>
+		{% endif %}
 
                 </section>
 

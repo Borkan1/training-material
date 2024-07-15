@@ -195,7 +195,7 @@ We want to filter our cells, but first we need to know what our data looks like.
 
 > <hands-on-title>Making QC plots</hands-on-title>
 >
-> 1. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy2) %} with the following parameters:
+> 1. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy3) %} with the following parameters:
 >    - {% icon param-file %} *"Annotated data matrix"*: `Mito-counted AnnData`
 >    - *"Method used for plotting"*: `Generic: Violin plot, using 'pl.violin'`
 >        - *"Keys for accessing variables"*: `Subset of variables in 'adata.var_names' or fields of '.obs'`
@@ -204,7 +204,7 @@ We want to filter our cells, but first we need to know what our data looks like.
 >
 > 2. **Rename** {% icon galaxy-pencil %} output `Violin - genotype - log`
 >
-> 3. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy2) %} with the following parameters:
+> 3. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy3) %} with the following parameters:
 >    - {% icon param-file %} *"Annotated data matrix"*: `Mito-counted AnnData`
 >    - *"Method used for plotting"*: `Generic: Violin plot, using 'pl.violin'`
 >        - *"Keys for accessing variables"*: `Subset of variables in 'adata.var_names' or fields of '.obs'`
@@ -213,7 +213,7 @@ We want to filter our cells, but first we need to know what our data looks like.
 >
 > 4. **Rename** {% icon galaxy-pencil %} output `Violin - sex - log`
 >
-> 5. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy2) %} with the following parameters:
+> 5. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy3) %} with the following parameters:
 >    - {% icon param-file %} *"Annotated data matrix"*: `Mito-counted AnnData`
 >    - *"Method used for plotting"*: `Generic: Violin plot, using 'pl.violin'`
 >        - *"Keys for accessing variables"*: `Subset of variables in 'adata.var_names' or fields of '.obs'`
@@ -222,7 +222,7 @@ We want to filter our cells, but first we need to know what our data looks like.
 >
 > 6. **Rename** {% icon galaxy-pencil %} output `Violin - batch - log`
 >
-> 7. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy2) %} with the following parameters:
+> 7. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy3) %} with the following parameters:
 >    - {% icon param-file %} *"Annotated data matrix"*: `Mito-counted AnnData`
 >    - *"Method used for plotting"*: `Generic: Scatter plot along observations or variables axes, using 'pl.scatter'`
 >        - *"Plotting tool that computed coordinates"*: `Using coordinates`
@@ -231,7 +231,7 @@ We want to filter our cells, but first we need to know what our data looks like.
 >
 > 6. **Rename** {% icon galaxy-pencil %} output `Scatter - mito x UMIs`
 >
-> 7. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy2) %} with the following parameters:
+> 7. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy3) %} with the following parameters:
 >    - {% icon param-file %} *"Annotated data matrix"*: `Mito-counted AnnData`
 >    - *"Method used for plotting"*: `Generic: Scatter plot along observations or variables axes, using 'pl.scatter'`
 >        - *"Plotting tool that computed coordinates"*: `Using coordinates`
@@ -240,7 +240,7 @@ We want to filter our cells, but first we need to know what our data looks like.
 >
 > 8. **Rename** {% icon galaxy-pencil %} output `Scatter - mito x genes`
 >
-> 9. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy2) %} with the following parameters:
+> 9. {% tool [Plot with scanpy](toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy3) %} with the following parameters:
 >    - {% icon param-file %} *"Annotated data matrix"*: `Mito-counted AnnData`
 >    - *"Method used for plotting"*: `Generic: Scatter plot along observations or variables axes, using 'pl.scatter'`
 >        - *"Plotting tool that computed coordinates"*: `Using coordinates`
